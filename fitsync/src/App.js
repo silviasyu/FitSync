@@ -13,7 +13,6 @@ function App() {
       <Router> {/* Wrap everything inside Router */}
         <div className="App">
           <header className="App-header">
-            <Sidebar /> {/* Sidebar component */}
           </header>
   
           <div className="main-content">

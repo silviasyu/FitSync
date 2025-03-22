@@ -1,23 +1,20 @@
 import { useState } from "react";
-import { Home, Settings, Menu, X } from "lucide-react";
-import CustomButton from "./CustomButton";
+import { Home, Settings, Menu, X } from "lucide-react"; // Keep the lucide-react icons
+import CustomButton from "./CustomButton"; // Import CustomButton
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex">
-      {/* Toggle Button */}
-      <CustomButton
-        onClick={() => setIsOpen(!isOpen)}
-        className="m-4 absolute top-4 left-4 z-50"
-      >
-        {isOpen ? <X /> : <Menu />}
-      </CustomButton>
+    <div className="relative">
+      {/* Hamburger Menu Icon (CustomButton) in the Top Right Corner */}
+      <button onClick={() => setIsOpen(!isOpen)} className="m-4">
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+    </button>
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-white p-5 w-64 transition-transform ${
+        className={`fixed top-0 left-0 h-full bg-gray-800 text-white p-5 w-64 transition-transform ease-in-out duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

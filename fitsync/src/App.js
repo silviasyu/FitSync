@@ -1,5 +1,9 @@
+import React from "react";
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from "./components/Sidebar";
+
+console.log("Sidebar:", Sidebar); // Should not be undefined or an object
 
 function App() {
   return (

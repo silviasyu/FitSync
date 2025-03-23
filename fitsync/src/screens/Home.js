@@ -22,7 +22,7 @@ const HomePage = () => {
         {/* Function Buttons */}
         <div className="d-flex flex-column gap-3">
           <button onClick={() => navigate("/workout-plan")} className="btn btn-light shadow-sm px-4 py-2 rounded-pill fs-5 border border-secondary">
-            Workout plan today
+           Today's workout plan
           </button>
           <button onClick={() => navigate("/calendar")} className="btn btn-light shadow-sm px-4 py-2 rounded-pill fs-5 border border-secondary">
             Calendar

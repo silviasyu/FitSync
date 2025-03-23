@@ -15,6 +15,9 @@ const Sidebar = () => {
         <Link to='#' className='menu-bars'>
           <Menu onClick={toggleSidebar} />
         </Link>
+        <Link to='#' className='menu-bars'>
+          <User />
+        </Link>
       </div>
 
       {/* Sidebar container with animation */}

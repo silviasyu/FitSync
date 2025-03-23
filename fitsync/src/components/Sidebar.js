@@ -29,7 +29,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-text">
-            <Link to="/home" className="text-black" onClick={toggleSidebar}>
+            <Link to="/" className="text-black" onClick={toggleSidebar}>
               Home
             </Link>
           </li>

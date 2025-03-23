@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./WorkoutPlan.module.css";
 import Sidebar from "../components/Sidebar";
 
 const DayView = () => {
+
   const { month, day } = useParams();
 
   // Convert month number to month name
@@ -16,6 +17,11 @@ const DayView = () => {
 
   // Construct the full date
   const fullDate = `${monthName} ${day}, 2025`;
+
+  // Video embed with a thumbnail preview
+  const [showVideo, setShowVideo] = useState(false);
+  const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Replace with actual video
+  const thumbnailUrl = "/assets/thumbnail.png";
 
   return (
     <div className={styles.container}>
@@ -72,8 +78,36 @@ const DayView = () => {
           </ul>
         </div>
       </div>
+
+      <div className={styles.videoContainer}>
+  <h3>Workout Demo</h3>
+
+  {!showVideo ? (
+    // Show the thumbnail before clicking
+    <img
+      src={thumbnailUrl}
+      alt="Workout Video Thumbnail"
+      style={{ cursor: "pointer", width: "677px", height: "391px" }}
+      onClick={() => setShowVideo(true)}
+    />
+  ) : (
+    // Show the iframe after clicking the thumbnail
+    <iframe
+      width="677"
+      height="391"
+      src="https://www.youtube.com/embed/Af-VOp7yrxg"
+      title="Quick Total Body Power Yoga"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+      style={{ display: "block", margin: "auto" }}
+    ></iframe>
+  )}
+</div>
     </div>
   );
 };
 
 export default DayView;
+

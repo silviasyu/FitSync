@@ -37,7 +37,8 @@ const Login = () => {
                     <label for="confirm-password">confirm password</label> 
                     <input value={confirmPass} onChange={(e) => setConfirmPass(e.target.value)} type="password" 
                     placeholder="********" id="confirm-password" name="password" required/>
-                <button type="submit" className="btn btn-light shadow-sm mt-3 px-4 py-2 fs-5 border border-secondary">Sign Up</button>
+                <button type="submit" onClick={() => navigate("/questionnaire")}
+                className="btn btn-light shadow-sm mt-3 px-4 py-2 fs-5 border border-secondary">Sign Up</button>
             </form>
             {/* Log in (bottom) */}
             <h2 className="display-5 fw-bold mt-2">Log In</h2>

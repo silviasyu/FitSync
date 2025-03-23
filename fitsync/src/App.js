@@ -8,7 +8,7 @@ import MonthlyReport from "./screens/MonthlyReport";
 import WorkoutPlan from "./screens/WorkoutPlan";
 import Login from "./screens/Login";
 import DayView from "./screens/DayView";
-
+import Questionnaire from "./screens/Questionnaire";
 
 function App() {
     return (
@@ -22,10 +22,11 @@ function App() {
               <Route path="/" element={<Login />} /> {/* Login Route */}
               <Route path="/home" element={<Home />} /> {/* Home Route */}
               <Route path="/day/:day" element={<DayView />} />
-              <Route path="/settings" element={<Settings />} /> {/* Settings Route */}
+              <Route path="/settings" element={<Settings />} /> Settings Route
               <Route path="/calendar" element={<Calendar />} /> {/* Calendar Route */}
               <Route path="/monthly-report" element={<MonthlyReport />} /> {/* Monthly Report Route */}
               <Route path="/workout-plan" element={<WorkoutPlan />} /> {/* Monthly Report Route */}
+              <Route path="/questionnaire" element={<Questionnaire />} /> {/* Questionnaire Route */} 
             </Routes>
           </div>
         </div>

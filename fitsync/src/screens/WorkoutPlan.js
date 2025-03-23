@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./WorkoutPlan.module.css"; // Importing CSS Module
-import { Menu, User } from "lucide-react"; // Icons for navbar
+import Sidebar from "../components/Sidebar";
 
 const WorkoutPlan = () => {
   return (
@@ -9,8 +9,7 @@ const WorkoutPlan = () => {
       <div className={styles.navbar}>
         <h1 className={styles.logo}>FitSync</h1>
         <div className={styles.navIcons}>
-          <Menu className={styles.icon} />
-          <User className={styles.icon} />
+          <Sidebar />
         </div>
       </div>
 

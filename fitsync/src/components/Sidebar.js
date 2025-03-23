@@ -29,15 +29,17 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-text">
-            <Link to="/" className="text-black" onClick={toggleSidebar}>
+            <Link to="/home" className="text-black" onClick={toggleSidebar}>
               Home
             </Link>
           </li>
+          {/* 
+          // To implement later: 
           <li className="nav-text">
             <Link to="/settings" className="text-black" onClick={toggleSidebar}>
               Settings
             </Link>
-          </li>
+          </li> */}
           <li className="nav-text">
             <Link to="/calendar" className="text-black" onClick={toggleSidebar}>
               Calendar View
@@ -46,6 +48,11 @@ const Sidebar = () => {
           <li className="nav-text">
             <Link to="/monthly-report" className="text-black" onClick={toggleSidebar}>
               Monthly Report
+            </Link>
+          </li>
+          <li className="nav-text">
+            <Link to="/questionnaire" className="text-black" onClick={toggleSidebar}>
+              Questionnaire
             </Link>
           </li>
           <li className="nav-text">

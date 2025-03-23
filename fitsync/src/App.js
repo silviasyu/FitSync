@@ -6,6 +6,7 @@ import Home from "./screens/Home";
 import Settings from "./screens/Settings";
 import Calendar from "./screens/Calendar";
 import MonthlyReport from "./screens/MonthlyReport";
+import WorkoutPlan from "./screens/WorkoutPlan";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Route path="/settings" element={<Settings />} /> {/* Settings Route */}
               <Route path="/calendar" element={<Calendar />} /> {/* Calendar Route */}
               <Route path="/monthly-report" element={<MonthlyReport />} /> {/* Monthly Report Route */}
+              <Route path="/workout-plan" element={<WorkoutPlan />} /> {/* Monthly Report Route */}
             </Routes>
           </div>
         </div>

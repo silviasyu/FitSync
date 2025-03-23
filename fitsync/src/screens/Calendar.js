@@ -5,6 +5,8 @@ import Sidebar from "../components/Sidebar";
 
 const CustomCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
+  const currentMonth = currentDate.getMonth() + 1; // Get month as a 1-based value
+  
   const navigate = useNavigate();
 
   const periodDays = [23, 26, 27, 28];
@@ -26,8 +28,9 @@ const CustomCalendar = () => {
   };
 
   const handleDayClick = (day) => {
-    navigate(`/day/${day}`);
+    navigate(`/day/${currentMonth}/${day}`);
   };
+
 
   const days = [];
   for (let i = 0; i < firstDayOfMonth; i++) {

@@ -21,7 +21,7 @@ function App() {
             <Routes> {/* Use Routes instead of Switch in React Router v6 */}
               <Route path="/" element={<Login />} /> {/* Login Route */}
               <Route path="/home" element={<Home />} /> {/* Home Route */}
-              <Route path="/day/:day" element={<DayView />} />
+              <Route path="/day/:month/:day" element={<DayView />} />
               <Route path="/settings" element={<Settings />} /> Settings Route
               <Route path="/calendar" element={<Calendar />} /> {/* Calendar Route */}
               <Route path="/monthly-report" element={<MonthlyReport />} /> {/* Monthly Report Route */}

@@ -25,7 +25,7 @@ function App() {
               <Route path="/settings" element={<Settings />} /> Settings Route
               <Route path="/calendar" element={<Calendar />} /> {/* Calendar Route */}
               <Route path="/monthly-report" element={<MonthlyReport />} /> {/* Monthly Report Route */}
-              <Route path="/workout-plan" element={<WorkoutPlan />} /> {/* Monthly Report Route */}
+              <Route path="/workout-plan/:month/:day" element={<DayView />} />
               <Route path="/questionnaire" element={<Questionnaire />} /> {/* Questionnaire Route */} 
             </Routes>
           </div>

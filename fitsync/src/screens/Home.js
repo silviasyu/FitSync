@@ -6,6 +6,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const HomePage = () => {
   const navigate = useNavigate();
 
+  const today = new Date();
+  const month = today.getMonth() + 1; // Convert 0-based month to 1-based
+  const day = today.getDate();
+
   return (
     <div className="d-flex flex-column vh-100" style={{ background: "linear-gradient(to right, #E0BBE4, #FFDFD3, #FFD3B6)" }}>
       {/* Top Navigation */}
@@ -21,7 +25,7 @@ const HomePage = () => {
       <div className="d-flex flex-grow-1 align-items-center justify-content-between p-4">
         {/* Function Buttons */}
         <div className="d-flex flex-column gap-3">
-          <button onClick={() => navigate("/workout-plan")} className="btn btn-light shadow-sm px-4 py-2 rounded-pill fs-5 border border-secondary">
+          <button onClick={() => navigate(`/workout-plan/${month}/${day}`)} className="btn btn-light shadow-sm px-4 py-2 rounded-pill fs-5 border border-secondary">
            Today's workout plan
           </button>
           <button onClick={() => navigate("/calendar")} className="btn btn-light shadow-sm px-4 py-2 rounded-pill fs-5 border border-secondary">

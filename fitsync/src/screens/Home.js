@@ -32,7 +32,7 @@ const HomePage = () => {
         {/* Welcome Message */}
         <div className="text-end text-dark me-4">
           <h1 className="display-3 fw-bold">FitSync</h1>
-          <h2 className="display-5 fw-bold mt-2">Welcome <span className="fst-italic">name</span>,</h2>
+          <h2 className="display-5 fw-bold mt-2">Welcome <span className="fst-italic">Nishitha</span>,</h2>
           <p className="mt-2 h5">You're near the end of your luteal phase</p>
           <p className="mt-1 h6">You may be feeling irritated, take things slow today and focus on low intensity exercises.</p>
         </div>

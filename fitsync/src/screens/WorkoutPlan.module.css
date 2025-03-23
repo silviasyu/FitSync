@@ -1,0 +1,114 @@
+/* 🌸 Background & Layout */
+.container {
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fde2e4, #fad2e1);
+    padding: 20px;
+    font-family: "Georgia", serif;
+  }
+  
+  /* 🔝 Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #123b27;
+  }
+  
+  .navIcons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  /* 🏋️‍♂️ Workout Header */
+  .workoutTitle {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #5a2b2b;
+  }
+  
+  .highlight {
+    color: #a1223c;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #5a2b2b;
+    margin-bottom: 25px;
+  }
+  
+  /* 🏋️‍♀️ Workout Grid */
+  .workoutGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .workoutCard {
+    background: rgba(255, 228, 232, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 1.5px solid rgba(255, 182, 193, 0.6);
+    transition: transform 0.2s;
+  }
+  
+  .workoutCard:hover {
+    transform: scale(1.03);
+  }
+  
+  /* 📝 Card Styling */
+  .workoutCard h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #3e2723;
+  }
+  
+  .workoutCard p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #5a3c41;
+  }
+  
+  .workoutCard ul {
+    padding-left: 15px;
+    list-style: none;
+  }
+  
+  .workoutCard li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  /* 📌 Small Text */
+  .smallText {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #7a2f51;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 900px) {
+    .workoutGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

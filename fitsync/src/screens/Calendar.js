@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import styles from "./Calendar.module.css"; // Importing CSS Module
+import { useNavigate } from "react-router-dom";
+import styles from "./Calendar.module.css";
+import Sidebar from "../components/Sidebar";
 
 const CustomCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const periodDays = [23, 26, 27, 28]; // Example period dates
-  const ovulationDays = [30, 31]; // Example ovulation days
+  const navigate = useNavigate();
 
-  // Get first day and number of days in the month
+  const periodDays = [23, 26, 27, 28];
+  const ovulationDays = [30, 31];
+
   const firstDayOfMonth = new Date(
     currentDate.getFullYear(),
     currentDate.getMonth(),
@@ -18,19 +21,26 @@ const CustomCalendar = () => {
     0
   ).getDate();
 
-  // Handle month navigation
   const changeMonth = (offset) => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + offset, 1));
   };
 
-  // Generate calendar days
+  const handleDayClick = (day) => {
+    navigate(`/day/${day}`);
+  };
+
   const days = [];
   for (let i = 0; i < firstDayOfMonth; i++) {
     days.push(<div key={`empty-${i}`} className={styles.emptyCell}></div>);
   }
   for (let i = 1; i <= daysInMonth; i++) {
     days.push(
-      <div key={i} className={styles.calendarCell}>
+      <div 
+        key={i} 
+        className={styles.calendarCell} 
+        onClick={() => handleDayClick(i)}
+        style={{ cursor: "pointer" }}
+      >
         {i}
         {periodDays.includes(i) && <span className={styles.periodDot}></span>}
         {ovulationDays.includes(i) && <span className={styles.ovulationDot}></span>}
@@ -40,6 +50,7 @@ const CustomCalendar = () => {
 
   return (
     <div className={styles.calendarContainer}>
+      <Sidebar />
       <h2 className={styles.calendarTitle}>When was your last period?</h2>
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarHeader}>
@@ -61,5 +72,3 @@ const CustomCalendar = () => {
 };
 
 export default CustomCalendar;
-
-

@@ -7,6 +7,7 @@ import Calendar from "./screens/Calendar";
 import MonthlyReport from "./screens/MonthlyReport";
 import WorkoutPlan from "./screens/WorkoutPlan";
 import Login from "./screens/Login";
+import DayView from "./screens/DayView";
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
   
           <div className="main-content">
             <Routes> {/* Use Routes instead of Switch in React Router v6 */}
-              <Route path="/login" element={<Login />} /> {/* Login Route */}
-              <Route path="/" element={<Home />} /> {/* Home Route */}
+              <Route path="/" element={<Login />} /> {/* Login Route */}
+              <Route path="/home" element={<Home />} /> {/* Home Route */}
+              <Route path="/day/:day" element={<DayView />} />
               <Route path="/settings" element={<Settings />} /> {/* Settings Route */}
               <Route path="/calendar" element={<Calendar />} /> {/* Calendar Route */}
               <Route path="/monthly-report" element={<MonthlyReport />} /> {/* Monthly Report Route */}
